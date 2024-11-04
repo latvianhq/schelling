@@ -1,0 +1,1 @@
+yarn --filter=. exec -- commitlint --edit $1

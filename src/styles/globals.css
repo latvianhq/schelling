@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* reset start */
+th,
+td {
+  padding: 0;
+}
+
+input:focus {
+  outline: 0 none;
+  border: 0 none;
+}
+
+button {
+  font-size: initial;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+/* reset end */
+
+:root {}

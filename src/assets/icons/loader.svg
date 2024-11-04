@@ -1,0 +1,23 @@
+<svg
+    width="26" height="26"
+    viewBox="0 0 200 200"
+    color="#fff"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <defs>
+        <linearGradient id="spinner-secondHalf" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-opacity="0" stop-color="currentColor" />
+            <stop offset="100%" stop-opacity="0.5" stop-color="currentColor" />
+        </linearGradient>
+        <linearGradient id="spinner-firstHalf" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-opacity="1" stop-color="currentColor" />
+            <stop offset="100%" stop-opacity="0.5" stop-color="currentColor" />
+        </linearGradient>
+    </defs>
+
+    <g stroke-width="20">
+        <path stroke="url(#spinner-secondHalf)" d="M 100 190 A 90 90 0 0 0 100 10" />
+        <path stroke="url(#spinner-firstHalf)" d="M 100 10 A 90 90 0 0 0 100 190" />
+    </g>
+</svg>

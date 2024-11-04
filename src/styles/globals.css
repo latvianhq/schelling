@@ -30,4 +30,26 @@ input[type='number'] {
 }
 /* reset end */
 
-:root {}
+:root {
+  --color-page-bg: 5 22 21;
+  --color-primary: 131 216 214;
+  --color-primary-darker: 73 172 170;
+  --color-primary-dark: 42 146 143;
+  --color-secondary: 12 39 38;
+  --color-secondary-darker: 7 24 24;
+  --color-red: 255 0 92;
+}
+
+@layer components {
+  /* layout start */
+  .container {
+    @apply max-w-full;
+  }
+  /* layout end */
+
+  /* typography start */
+  .typo-control {
+    @apply text-base;
+  }
+  /* typography end */
+}

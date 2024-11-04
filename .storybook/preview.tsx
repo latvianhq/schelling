@@ -2,11 +2,13 @@ import type { Preview } from '@storybook/react';
 
 import '@/styles/globals.css';
 
+import { stratos } from '../src/fonts';
+
 const preview: Preview = {
   tags: ['autodocs'],
   decorators: [
     (Story) => (
-      <div className={`text-white`}>
+      <div className={`${stratos.className} font-medium`}>
         <Story />
       </div>
     ),
@@ -23,7 +25,7 @@ const preview: Preview = {
       default: 'dark',
       values: [
         { name: 'light', value: '#d7d7d7' },
-        { name: 'dark', value: 'rgba(24, 10, 42, 1)' },
+        { name: 'dark', value: 'rgba(7, 24, 24, 1)' },
       ],
     },
     nextjs: {

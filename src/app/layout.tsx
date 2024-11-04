@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { stratos } from '@/fonts';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -13,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body>{children}</body>
+    <html lang='en' className={`${stratos.className}`}>
+      <body className='bg-page-bg relative flex min-h-screen w-screen flex-col overflow-x-hidden font-medium text-white antialiased'>
+        {children}
+      </body>
     </html>
   );
 }

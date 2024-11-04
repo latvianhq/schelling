@@ -8,6 +8,10 @@ const config: StorybookConfig = {
       from: '../public',
       to: 'public',
     },
+    {
+      from: '../src/fonts',
+      to: 'src/fonts',
+    },
   ],
   stories: ['../src/stories/**/*.mdx', '../src/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [

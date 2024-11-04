@@ -12,7 +12,7 @@ import {
   buttonVariantClass,
 } from './button.constant';
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> & {
   className?: string;
   size?: ButtonSize;
   variant?: ButtonVariant;
@@ -20,12 +20,12 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   inline?: boolean;
 } & (
     | {
-        text: undefined;
+        text?: undefined;
         children: ReactNode;
       }
     | {
-        text: string;
-        children: undefined;
+        text?: string;
+        children?: undefined;
       }
   );
 
@@ -40,7 +40,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         {...props}
         className={twMerge(
-          'typo-control group relative inline-flex w-auto items-center justify-center gap-3 rounded-[14px] px-4 transition-all duration-300',
+          'typo-control group relative inline-flex w-auto select-none items-center justify-center gap-3 rounded-[14px] px-4 transition-all duration-300',
           disabled && 'pointer-events-none opacity-50',
           buttonSizeClass[size],
           buttonVariantClass[variant],

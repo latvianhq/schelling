@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={`${stratos.className}`}>
-      <body className='bg-page-bg relative flex min-h-screen w-screen flex-col overflow-x-hidden font-medium typo-text antialiased'>
+      <body className='typo-text relative flex min-h-screen w-screen flex-col overflow-x-hidden bg-page-bg font-medium antialiased'>
         {children}
       </body>
     </html>

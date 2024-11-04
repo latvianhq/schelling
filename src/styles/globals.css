@@ -48,8 +48,17 @@ input[type='number'] {
   /* layout end */
 
   /* typography start */
+  .typo-h1 {
+    @apply text-xl font-bold uppercase;
+  }
+  .typo-title {
+    @apply text-base;
+  }
   .typo-control {
     @apply text-base;
+  }
+  .typo-text {
+    @apply text-[14px] text-white/60;
   }
   /* typography end */
 }

@@ -57,10 +57,10 @@ export const InputField = ({
 
   return (
     <div className={className}>
-      {label && <label className='mb-3 block leading-[1] text-white'>{label}</label>}
+      {label && <label className='typo-title mb-3 block leading-[1] text-white'>{label}</label>}
       <div
         className={twMerge(
-          'bg-secondary-darker flex h-[54px] w-full items-center gap-2 rounded-xl border border-white/10 px-5 py-0 font-normal text-white transition duration-300 hover:border-white/30',
+          'flex h-[54px] w-full items-center gap-2 rounded-xl border border-white/10 bg-secondary-darker px-5 py-0 font-normal text-white transition duration-300 hover:border-white/30',
           active && 'border-primary hover:border-primary/80',
           error && 'border-red text-red hover:border-red',
           disabled && 'cursor-not-allowed brightness-50 grayscale',
@@ -85,7 +85,7 @@ export const InputField = ({
         <AdornmentWrapper adornment={endAdornment} />
       </div>
       {helperText && (
-        <span className={twMerge('text-red mt-1 flex items-center gap-2', error && 'text-red')}>{helperText}</span>
+        <span className={twMerge('mt-1 flex items-center gap-2 text-red', error && 'text-red')}>{helperText}</span>
       )}
     </div>
   );

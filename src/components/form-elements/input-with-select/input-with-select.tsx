@@ -21,7 +21,7 @@ export const InputWithSelect = ({ selectValue, onSelectChange, options, ...props
           options={options}
           className='mr-1 !h-[calc(100%-2px)]'
           valueClassName={twMerge(
-            'border-y-0 rounded-none border-l-0 bg-transparent pl-5 border-r-[1px] border-primary/20',
+            'border-y-0 rounded-none border-l-0 bg-transparent pl-3 border-r-[1px] border-primary/20',
           )}
         />
       }

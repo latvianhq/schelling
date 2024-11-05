@@ -54,6 +54,9 @@ input[type='number'] {
   .typo-title {
     @apply text-xl text-white;
   }
+  .typo-base {
+    @apply text-base text-white;
+  }
   .typo-control {
     @apply text-base text-white;
   }

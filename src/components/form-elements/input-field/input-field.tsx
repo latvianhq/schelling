@@ -62,7 +62,7 @@ export const InputField = ({
       {label && <label className={twMerge('mb-3 block leading-[1] text-white', labelClassName)}>{label}</label>}
       <div
         className={twMerge(
-          'flex h-[54px] w-full items-center gap-2 rounded-xl border border-white/10 bg-secondary-darker px-5 py-0 font-normal text-white transition duration-300 hover:border-white/30',
+          'flex h-[54px] w-full items-center gap-2 rounded-xl border border-white/10 bg-secondary-darker px-3 py-0 font-normal text-white transition duration-300 hover:border-white/30',
           active && 'border-primary hover:border-primary/80',
           error && 'border-red text-red hover:border-red',
           disabled && 'cursor-not-allowed brightness-50 grayscale',
@@ -95,7 +95,7 @@ export const InputField = ({
 
 const AdornmentWrapper = ({ adornment }: { adornment: React.ReactNode }) => {
   return typeof adornment === 'string' || typeof adornment === 'number' ? (
-    <span className='text-main-text'>{adornment}</span>
+    <span className='typo-text'>{adornment}</span>
   ) : (
     adornment
   );

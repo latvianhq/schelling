@@ -17,8 +17,8 @@ export const Checkbox = memo<CheckboxProps>((props) => {
   return (
     <div
       className={twMerge(
-        'text-primary bg-page-bg relative h-[30px] w-[30px] cursor-pointer overflow-hidden rounded-md border border-white/10 text-transparent transition-colors duration-300',
-        checked && 'bg-primary/10 border-primary',
+        'relative h-6 w-6 cursor-pointer overflow-hidden rounded-md border border-white/10 bg-page-bg text-primary text-transparent transition-colors duration-300',
+        checked && 'border-primary bg-primary/10',
         disabled ? 'pointer-events-none grayscale' : 'hover:bg-primary/20',
         className,
       )}
@@ -37,7 +37,7 @@ export const Checkbox = memo<CheckboxProps>((props) => {
       />
       <CheckIcon
         className={twMerge(
-          'text-primary absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[30%] transform opacity-0 transition-opacity duration-200',
+          'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[30%] transform text-primary opacity-0 transition-opacity duration-200',
           checked && 'opacity-100',
         )}
       />

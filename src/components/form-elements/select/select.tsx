@@ -61,7 +61,7 @@ export const Select = ({
     <div ref={rootRef} className={twMerge('relative', buttonSizeClass[size], inline && 'h-auto', className)}>
       <div
         className={twMerge(
-          'bg-secondary-darker z-10 flex h-full cursor-pointer items-center justify-between gap-3 rounded-xl border px-4 transition-all duration-300',
+          'z-10 flex h-full cursor-pointer items-center justify-between gap-3 rounded-xl border px-4 transition-all duration-300',
           isOpen ? 'border-white/20' : 'border-white/10 hover:border-white/20 active:border-white/30',
           label ? 'text-white' : 'text-white/60',
           valueClassName,
@@ -72,14 +72,14 @@ export const Select = ({
 
         <ChevronLeftIcon
           width={7}
-          className={twMerge('text-primary/30 -rotate-90 transition-all duration-200', isOpen && 'rotate-90')}
+          className={twMerge('-rotate-90 text-primary/30 transition-all duration-200', isOpen && 'rotate-90')}
         />
       </div>
 
       <AnimatePresence>
         {isOpen && (
           <MotionUl
-            className='absolute inset-x-0 top-full rounded-xl border border-white/20 bg-[inherit]'
+            className='absolute inset-x-0 top-full z-10 rounded-xl border border-white/20 bg-secondary-darker'
             initial={{ opacity: 0, marginTop: 40 }}
             animate={{ opacity: 1, marginTop: 12 }}
             exit={{ opacity: 0, marginTop: 40 }}
@@ -88,7 +88,7 @@ export const Select = ({
             {options.map((option) => (
               <li
                 key={option.value}
-                className={twMerge('cursor-pointer px-6 py-4 text-white transition-all duration-300')}
+                className={twMerge('cursor-pointer px-3 py-4 text-white transition-all duration-300')}
                 onClick={handleOptionClick(option.value)}
               >
                 {option.label}

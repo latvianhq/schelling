@@ -44,7 +44,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           disabled && 'pointer-events-none opacity-50',
           buttonSizeClass[size],
           buttonVariantClass[variant],
-          inline && 'h-auto',
+          inline && '!h-auto py-1',
           className,
         )}
       >

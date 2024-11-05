@@ -8,7 +8,7 @@ export default function SecondaryLayout({
   return (
     <>
       <Header />
-      <main className='container'>{children}</main>
+      <main className='container flex flex-1 pb-[50px] pt-[54px] md:pb-[100px] md:pt-[134px]'>{children}</main>
     </>
   );
 }

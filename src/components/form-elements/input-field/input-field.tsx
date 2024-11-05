@@ -1,6 +1,6 @@
 'use client';
 
-import { FocusEventHandler, InputHTMLAttributes, useState } from 'react';
+import { FocusEventHandler, InputHTMLAttributes, ReactNode, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { Loader } from '@/components/loader';
@@ -9,7 +9,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   startAdornment?: React.ReactNode;
   endAdornment?: React.ReactNode;
   value?: string | number;
-  label?: string;
+  label?: ReactNode;
   error?: boolean;
   helperText?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
@@ -17,6 +17,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
   isLoading?: boolean;
   inputWrapperClassName?: string;
+  labelClassName?: string;
 }
 
 export const InputField = ({
@@ -35,6 +36,7 @@ export const InputField = ({
   className,
   isLoading,
   inputWrapperClassName,
+  labelClassName,
   ...rest
 }: InputProps) => {
   const [active, setActive] = useState(false);
@@ -57,7 +59,7 @@ export const InputField = ({
 
   return (
     <div className={className}>
-      {label && <label className='typo-title mb-3 block leading-[1] text-white'>{label}</label>}
+      {label && <label className={twMerge('mb-3 block leading-[1] text-white', labelClassName)}>{label}</label>}
       <div
         className={twMerge(
           'flex h-[54px] w-full items-center gap-2 rounded-xl border border-white/10 bg-secondary-darker px-5 py-0 font-normal text-white transition duration-300 hover:border-white/30',

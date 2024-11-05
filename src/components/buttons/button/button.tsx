@@ -24,7 +24,7 @@ export type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'childre
         children: ReactNode;
       }
     | {
-        text?: string;
+        text?: ReactNode;
         children?: undefined;
       }
   );

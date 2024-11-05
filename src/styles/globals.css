@@ -49,16 +49,16 @@ input[type='number'] {
 
   /* typography start */
   .typo-h1 {
-    @apply text-xl font-bold uppercase;
+    @apply text-xl text-white uppercase;
   }
   .typo-title {
-    @apply text-base;
+    @apply text-xl text-white;
   }
   .typo-control {
-    @apply text-base;
+    @apply text-base text-white;
   }
   .typo-text {
-    @apply text-[14px] text-white/60;
+    @apply text-[14px] font-normal text-white/60;
   }
   /* typography end */
 }
